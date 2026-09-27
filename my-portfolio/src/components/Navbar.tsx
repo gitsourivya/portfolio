@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-gray-800 bg-[#0a0a0a]/90 backdrop-blur">
       <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
         <a href="#" className="text-xl font-bold">
-          Sourivya
+          
         </a>
 
         <div className="flex items-center gap-4 sm:gap-7 text-sm text-gray-400">
