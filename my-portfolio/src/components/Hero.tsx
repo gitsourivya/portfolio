@@ -1,3 +1,6 @@
+
+import { FaDownload } from "react-icons/fa";
+
 export default function Hero() {
   return (
     <section className="min-h-[90vh] flex items-center px-6">
@@ -34,6 +37,15 @@ export default function Hero() {
               className="px-6 py-3 border border-gray-700 rounded-lg font-medium hover:border-gray-400 hover:-translate-y-0.5 transition"
             >
               Contact Me
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download="Sourivya_Mondal_Resume.pdf"
+              className="px-6 py-3 border border-gray-700 rounded-lg font-medium hover:border-gray-400 hover:-translate-y-0.5 transition flex items-center gap-2"
+            >
+              <FaDownload size={16} />
+              Download Resume
             </a>
           </div>
         </div>
