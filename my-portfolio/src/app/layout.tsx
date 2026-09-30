@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sourivya Mondal | BTech CSE Student & Backend Developer",
+  title: "Sourivya Mondal | BTech CSE Student & FullStack Developer",
   description:
     "Portfolio of Sourivya Mondal, a BTech Computer Science student at IIIT Manipur interested in backend development, software engineering, and building practical applications.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Sourivya",
     "IIIT Manipur",
     "Computer Science",
-    "Backend Developer",
+    "FullStack Developer",
     "Software Developer",
     "Web Developer",
     "Next.js",

@@ -1,34 +1,106 @@
 @import "tailwindcss";
-
-* {
-  box-sizing: border-box;
+/* Professional dark hero background */
+.hero-bg {
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(20, 43, 85, 0.22),
+      transparent 60%
+    ),
+    linear-gradient(135deg, #071126 0%, #081329 55%, #061024 100%);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Abstract blue corner shapes */
+.hero-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 78, 160, 0.42),
+    rgba(15, 35, 77, 0.12)
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
+.hero-orb-top {
+  top: -410px;
+  left: -250px;
+}
+
+.hero-orb-bottom {
+  right: -250px;
+  bottom: -440px;
+}
+
+/* Thin diagonal blue lines */
+.hero-line {
+  position: absolute;
+  width: 550px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(37, 99, 235, 0.85),
+    transparent
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-line-left {
+  left: -170px;
+  bottom: 28%;
+  transform: rotate(-45deg);
+}
+
+.hero-line-right {
+  right: -150px;
+  top: 32%;
+  transform: rotate(-45deg);
+}
+
+/* Responsive decoration */
+@media (max-width: 640px) {
+  .hero-orb {
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero-orb-top {
+    top: -280px;
+    left: -220px;
+  }
+
+  .hero-orb-bottom {
+    right: -230px;
+    bottom: -300px;
+  }
+
+  .hero-line {
+    width: 350px;
+  }
+}
+/* Black background for the rest of the portfolio */
 body {
-  margin: 0;
-  background: #0a0a0a;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-section {
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Keep the Hero's existing navy background */
+.hero-bg {
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(20, 43, 85, 0.22),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #071126 0%,
+      #081329 55%,
+      #061024 100%
+    );
 }
