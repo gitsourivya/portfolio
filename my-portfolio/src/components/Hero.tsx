@@ -1,101 +1,115 @@
-
-import {
-  FaDownload,
-  FaArrowRight,
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { FiArrowUpRight, FiDownload } from "react-icons/fi";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="hero-bg relative isolate flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6 py-24 text-center"
+      className="charcoal-backdrop relative min-h-[calc(100vh-5rem)] flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-12 lg:py-16 overflow-hidden border-b border-white/[0.06]"
     >
-      {/* Background decorations */}
-      <div className="hero-orb hero-orb-top" aria-hidden="true" />
-      <div className="hero-orb hero-orb-bottom" aria-hidden="true" />
-      <div className="hero-line hero-line-left" aria-hidden="true" />
-      <div className="hero-line hero-line-right" aria-hidden="true" />
+      {/* Editorial Section Coordinate & Index */}
+      <div className="flex items-center justify-between w-full max-w-7xl mx-auto text-zinc-500">
+        <div className="flex items-center gap-3">
+          <span className="editorial-number">.01</span>
+          <span className="h-[1px] w-8 bg-zinc-800" />
+          <span className="editorial-label text-zinc-400">Introduction</span>
+        </div>
+        <span className="hidden sm:inline-block editorial-label text-zinc-500">
+          Portfolio 
+        </span>
+      </div>
 
-      {/* Main content */}
-      <div className="relative z-10 mx-auto w-full max-w-4xl">
-        <p className="mb-4 animate-[fadeIn_0.6s_ease-out] text-lg font-medium text-blue-400 sm:text-xl">
-          Hello, I'm
+      {/* Main Center Stage */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto my-auto py-12 text-center flex flex-col items-center">
+        {/* Eyebrow */}
+        <p className="animate-fade-1 editorial-label text-zinc-400 mb-5">
+          Hey, I'm
         </p>
 
-        <h1 className="mb-5 animate-[fadeIn_0.8s_ease-out] text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+        {/* Oversized Visually Striking Heading in Outfit */}
+        <h1 className="animate-fade-2 font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white mb-6 select-none leading-[0.98]">
           Sourivya Mondal
         </h1>
 
-        <h2 className="mb-7 animate-[fadeIn_1s_ease-out] text-lg font-medium text-slate-300 sm:text-2xl">
+        {/* Subtitle in Outfit */}
+        <h2 className="animate-fade-3 font-heading text-lg sm:text-2xl md:text-3xl font-semibold text-zinc-200 max-w-2xl mb-6 tracking-tight">
           BTech CSE Student &amp; FullStack Developer
         </h2>
 
-        <p className="mx-auto mb-12 max-w-2xl animate-[fadeIn_1.2s_ease-out] text-sm leading-7 text-slate-400 sm:text-base">
-          First-year Computer Science student at IIIT Manipur,
-          interested in fullstack development, software engineering,
-          and building practical applications.
+        {/* Body Narrative in Manrope */}
+        <p className="animate-fade-4 font-body text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed mb-10 font-normal">
+          First-year Computer Science undergraduate at IIIT Manipur, exploring
+          the intersection of scalable backend architectures, practical fullstack
+          engineering, and intelligent web applications.
         </p>
 
-        {/* Action buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-4 animate-[fadeIn_1.4s_ease-out]">
+        {/* Action Buttons in Manrope */}
+        <div className="animate-fade-5 flex flex-wrap items-center justify-center gap-4">
           <a
             href="#projects"
-            className="group inline-flex items-center gap-3 rounded-xl border border-blue-500 bg-blue-600 px-7 py-3.5 font-medium text-white shadow-lg shadow-blue-950/30 transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+            className="font-body group inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-black font-semibold text-xs tracking-wider uppercase rounded hover:bg-zinc-200 transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           >
-            View Projects
-            <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
-
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-xl border border-slate-600 px-7 py-3.5 font-medium text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-blue-400 hover:text-blue-300"
-          >
-            Contact Me
+            <span>View Projects</span>
+            <FiArrowUpRight className="text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
 
           <a
             href="/resume.pdf"
             download="Sourivya_Mondal_Resume.pdf"
-            className="inline-flex items-center justify-center gap-3 rounded-xl border border-slate-600 px-7 py-3.5 font-medium text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-blue-400 hover:text-blue-300"
+            className="font-body group inline-flex items-center gap-2.5 px-6 py-3.5 bg-zinc-900/80 border border-white/20 text-white font-medium text-xs tracking-wider uppercase rounded hover:border-white/60 hover:bg-zinc-800 transition-all duration-300"
           >
-            <FaDownload />
-            Download Resume
+            <FiDownload className="text-sm text-zinc-400 group-hover:text-white transition-colors" />
+            <span>Resume</span>
+          </a>
+
+          <a
+            href="#contact"
+            className="font-body inline-flex items-center gap-2 px-6 py-3.5 text-zinc-400 hover:text-white text-xs tracking-wider uppercase font-medium transition-colors"
+          >
+            <span>Contact Me →</span>
           </a>
         </div>
+      </div>
 
-        {/* Social links */}
-        <div className="mt-10 flex items-center justify-center gap-7 animate-[fadeIn_1.6s_ease-out]">
+      {/* Floating Bottom Rails */}
+      <div className="w-full max-w-7xl mx-auto flex items-end justify-between pt-6 text-zinc-500">
+        {/* Left: Social Icons */}
+        <div className="flex items-center gap-5">
           <a
             href="https://github.com/gitsourivya"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="text-xl text-slate-400 transition duration-300 hover:-translate-y-1 hover:text-white"
+            aria-label="GitHub Profile"
+            className="text-zinc-500 hover:text-white transition-colors"
           >
-            <FaGithub />
+            <FaGithub size={17} />
           </a>
-
           <a
             href="https://www.linkedin.com/in/sourivya-mondal-99235a427/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-xl text-slate-400 transition duration-300 hover:-translate-y-1 hover:text-blue-400"
+            aria-label="LinkedIn Profile"
+            className="text-zinc-500 hover:text-white transition-colors"
           >
-            <FaLinkedin />
+            <FaLinkedinIn size={17} />
           </a>
-
           <a
             href="mailto:msourivya08@gmail.com"
-            aria-label="Email"
-            className="text-xl text-slate-400 transition duration-300 hover:-translate-y-1 hover:text-blue-400"
+            aria-label="Email Sourivya"
+            className="text-zinc-500 hover:text-white transition-colors"
           >
-            <FaEnvelope />
+            <FaEnvelope size={16} />
           </a>
         </div>
+
+        {/* Right: Editorial "SCROLL —" Indicator in Manrope */}
+        <a
+          href="#about"
+          className="group flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-zinc-500 hover:text-zinc-300 transition-colors font-body"
+        >
+          <span>SCROLL</span>
+          <span className="h-[1px] w-6 bg-zinc-700 group-hover:w-10 group-hover:bg-zinc-400 transition-all duration-300" />
+        </a>
       </div>
     </section>
   );

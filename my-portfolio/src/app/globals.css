@@ -1,106 +1,152 @@
 @import "tailwindcss";
-/* Professional dark hero background */
-.hero-bg {
-  background:
-    radial-gradient(
-      ellipse at 50% 45%,
-      rgba(20, 43, 85, 0.22),
-      transparent 60%
-    ),
-    linear-gradient(135deg, #071126 0%, #081329 55%, #061024 100%);
+
+@theme {
+  --font-heading: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Abstract blue corner shapes */
-.hero-orb {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    rgba(29, 78, 160, 0.42),
-    rgba(15, 35, 77, 0.12)
-  );
-  pointer-events: none;
-  z-index: -1;
+:root {
+  --bg-primary: #0c0d10;
+  --bg-surface: #14161b;
+  --bg-surface-elevated: #1a1c23;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(255, 255, 255, 0.18);
+  --text-muted: #8b8e98;
+  --text-secondary: #c2c4cb;
+  --text-primary: #f5f5f7;
 }
 
-.hero-orb-top {
-  top: -410px;
-  left: -250px;
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
-.hero-orb-bottom {
-  right: -250px;
-  bottom: -440px;
-}
-
-/* Thin diagonal blue lines */
-.hero-line {
-  position: absolute;
-  width: 550px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(37, 99, 235, 0.85),
-    transparent
-  );
-  pointer-events: none;
-  z-index: -1;
-}
-
-.hero-line-left {
-  left: -170px;
-  bottom: 28%;
-  transform: rotate(-45deg);
-}
-
-.hero-line-right {
-  right: -150px;
-  top: 32%;
-  transform: rotate(-45deg);
-}
-
-/* Responsive decoration */
-@media (max-width: 640px) {
-  .hero-orb {
-    width: 380px;
-    height: 380px;
-  }
-
-  .hero-orb-top {
-    top: -280px;
-    left: -220px;
-  }
-
-  .hero-orb-bottom {
-    right: -230px;
-    bottom: -300px;
-  }
-
-  .hero-line {
-    width: 350px;
-  }
-}
-/* Black background for the rest of the portfolio */
 body {
-  background-color: #000000;
-  color: #ffffff;
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Keep the Hero's existing navy background */
-.hero-bg {
-  background:
+/* Headings typography: Outfit with clean geometric curvature & tight tracking */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* Body & general text: Manrope */
+.font-body {
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Monospace numerals & technical tags */
+.font-mono {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* Subtle editorial tactile film grain texture */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Deep textured charcoal background vignette */
+.charcoal-backdrop {
+  background: 
     radial-gradient(
-      ellipse at 50% 45%,
-      rgba(20, 43, 85, 0.22),
-      transparent 60%
-    ),
-    linear-gradient(
-      135deg,
-      #071126 0%,
-      #081329 55%,
-      #061024 100%
+      ellipse 90% 65% at 50% 15%,
+      rgba(38, 42, 51, 0.45) 0%,
+      rgba(17, 19, 24, 0.8) 60%,
+      #0c0d10 100%
     );
+}
+
+/* Refined editorial card with hair-line border and charcoal depth */
+.editorial-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: var(--border-highlight);
+  background-color: var(--bg-surface-elevated);
+}
+
+/* Refined editorial micro-labels with Manrope, medium weight and subtle tracking */
+.editorial-label {
+  font-family: var(--font-manrope), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.editorial-number {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: #71717a;
+}
+
+/* Vertical text helper for editorial side rails */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Staggered entrance keyframe animations */
+@keyframes editorialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-1 {
+  animation: editorialFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.animate-fade-2 {
+  animation: editorialFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-fade-3 {
+  animation: editorialFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+
+.animate-fade-4 {
+  animation: editorialFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.animate-fade-5 {
+  animation: editorialFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
