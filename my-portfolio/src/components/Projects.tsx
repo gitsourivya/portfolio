@@ -30,7 +30,7 @@ const projects = [
     ],
     github: "https://github.com/gitsourivya/screenshot-to-code",
     demo: "https://screenshot-to-code-frontend-chi.vercel.app",
-    image: "/projects/screenshot-to-code.jpeg",
+    image: "/projects/stc2.jpeg",
   },
 ];
 
