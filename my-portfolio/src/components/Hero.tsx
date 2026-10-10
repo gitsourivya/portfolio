@@ -20,54 +20,73 @@ export default function Hero() {
       </div>
 
       {/* Main Center Stage */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto my-auto py-12 text-center flex flex-col items-center">
-        {/* Eyebrow */}
-        <p className="animate-fade-1 editorial-label text-zinc-400 mb-5">
-          Hey, I'm
-        </p>
+      <div className="relative z-10 w-full max-w-7xl mx-auto my-auto py-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl">
+          {/* Eyebrow */}
+          <p className="animate-fade-1 editorial-label text-zinc-400 mb-5">
+            Hey, I'm
+          </p>
 
-        {/* Oversized Visually Striking Heading in Outfit */}
-        <h1 className="animate-fade-2 font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white mb-6 select-none leading-[0.98]">
-          Sourivya Mondal
-        </h1>
+          {/* Oversized Visually Striking Heading in Outfit */}
+          <h1 className="animate-fade-2 font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white mb-6 select-none leading-[0.98]">
+            Sourivya Mondal
+          </h1>
 
-        {/* Subtitle in Outfit */}
-        <h2 className="animate-fade-3 font-heading text-lg sm:text-2xl md:text-3xl font-semibold text-zinc-200 max-w-2xl mb-6 tracking-tight">
-          BTech CSE Student &amp; FullStack Developer
-        </h2>
+          {/* Subtitle in Outfit */}
+          <h2 className="animate-fade-3 font-heading text-lg sm:text-2xl md:text-3xl font-semibold text-zinc-200 max-w-2xl mb-6 tracking-tight">
+            BTech CSE Student &amp; FullStack Developer
+          </h2>
 
-        {/* Body Narrative in Manrope */}
-        <p className="animate-fade-4 font-body text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed mb-10 font-normal">
-          First-year Computer Science undergraduate at IIIT Manipur, exploring
-          the intersection of scalable backend architectures, practical fullstack
-          engineering, and intelligent web applications.
-        </p>
+          {/* Body Narrative in Manrope */}
+          <p className="animate-fade-4 font-body text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed mb-10 font-normal">
+            First-year Computer Science undergraduate at IIIT Manipur, exploring
+            the intersection of scalable backend architectures, practical fullstack
+            engineering, and intelligent web applications.
+          </p>
 
-        {/* Action Buttons in Manrope */}
-        <div className="animate-fade-5 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#projects"
-            className="font-body group inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-black font-semibold text-xs tracking-wider uppercase rounded hover:bg-zinc-200 transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
-          >
-            <span>View Projects</span>
-            <FiArrowUpRight className="text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          {/* Action Buttons in Manrope */}
+          <div className="animate-fade-5 flex flex-wrap items-center lg:justify-start justify-center gap-4">
+            <a
+              href="#projects"
+              className="font-body group inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-black font-semibold text-xs tracking-wider uppercase rounded hover:bg-zinc-200 transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+            >
+              <span>View Projects</span>
+              <FiArrowUpRight className="text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
 
-          <a
-            href="/resume.pdf"
-            download="Sourivya_Mondal_Resume.pdf"
-            className="font-body group inline-flex items-center gap-2.5 px-6 py-3.5 bg-zinc-900/80 border border-white/20 text-white font-medium text-xs tracking-wider uppercase rounded hover:border-white/60 hover:bg-zinc-800 transition-all duration-300"
-          >
-            <FiDownload className="text-sm text-zinc-400 group-hover:text-white transition-colors" />
-            <span>Resume</span>
-          </a>
+            <a
+              href="/resume.pdf"
+              download="Sourivya_Mondal_Resume.pdf"
+              className="font-body group inline-flex items-center gap-2.5 px-6 py-3.5 bg-zinc-900/80 border border-white/20 text-white font-medium text-xs tracking-wider uppercase rounded hover:border-white/60 hover:bg-zinc-800 transition-all duration-300"
+            >
+              <FiDownload className="text-sm text-zinc-400 group-hover:text-white transition-colors" />
+              <span>Resume</span>
+            </a>
 
-          <a
-            href="#contact"
-            className="font-body inline-flex items-center gap-2 px-6 py-3.5 text-zinc-400 hover:text-white text-xs tracking-wider uppercase font-medium transition-colors"
-          >
-            <span>Contact Me →</span>
-          </a>
+            <a
+              href="#contact"
+              className="font-body inline-flex items-center gap-2 px-6 py-3.5 text-zinc-400 hover:text-white text-xs tracking-wider uppercase font-medium transition-colors"
+            >
+              <span>Contact Me →</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Hero Photo */}
+        <div className="animate-fade-3 relative shrink-0 flex items-center justify-center lg:justify-end">
+          <img
+            src="/photo.png"
+            alt="Sourivya Mondal"
+            className="w-80 sm:w-96 lg:w-[480px] xl:w-[540px] h-auto object-cover select-none pointer-events-none"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 20%, black 88%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 82%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 20%, black 88%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 82%, transparent 100%)",
+              maskComposite: "intersect",
+              WebkitMaskComposite: "destination-in",
+            }}
+          />
         </div>
       </div>
 
